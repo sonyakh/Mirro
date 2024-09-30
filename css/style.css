@@ -159,6 +159,44 @@ h3{
 .counter p{
     color: #3A5F56;
 }
+#burger, [for="burger"]{
+    display: none;
+    height: 30px;
+}
+[for="burger"] img{
+    height: 30px;
+    width: auto;
+}
+
+@media (max-width:660px) {
+    [for="burger"]{
+        display: block;
+        position: fixed;
+        right: 15px;
+    }
+    .menu__list{
+        display: none;
+    }
+    #burger:checked + label + nav > .menu__list{
+        display: inline-block;
+    }
+    .menu__list{
+        position: fixed;
+        right: 0px;
+        top: 70px;
+        background-color: rgba(255, 255, 255, 0.9);
+        width: 100%;
+        height: fit-content;
+        text-align: center;
+    }
+    .menu__link{
+        font-size: 36px;
+    }
+    .header__button{
+        position: relative;
+        right: 45px;
+    }
+}
 /* ------------------------ */
 
 .about__me{
